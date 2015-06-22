@@ -1,11 +1,13 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+function readScript(file)
+    local f = io.open(file, "rb")
+    local content = f:read("*all")
+    f:close()
+return content
+end
 
-# Other files and folders
-.settings/
+load(readScript(LIB_PATH.."DivinePred.luac"), "Divine Prediction","bt",_ENV)()
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+
+
+
+
